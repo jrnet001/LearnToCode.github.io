@@ -11,9 +11,9 @@ import { Observable } from 'rxjs';
 export class DataServiceService {
 
   private extention = '.csv';
-  private month: number;
-  private day: number;
-  private year: number;
+  public month: number;
+  public day: number;
+  public year: number;
 
   private DateWiseDataUrl = `https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv`;
   private baseDataUrl = 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/';
@@ -22,10 +22,13 @@ export class DataServiceService {
   private now: Date;
 
   getDate(date: number) {
-    if (date < 10) {
-      return '0' + date;
-    }
-    return date;
+    // if (date < 10) {
+    //   return '0' + date;
+    // }
+    // return date;
+
+    return date < 10 ? '0' + (date) : (date).toString();
+
   }
 
   setDatesString() {

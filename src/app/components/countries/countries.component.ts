@@ -47,7 +47,7 @@ export class CountriesComponent implements OnInit {
   };
 
 
-  constructor(private dataService: DataServiceService) { }
+  constructor(public dataService: DataServiceService) { }
 
   ngOnInit() {
 
@@ -70,7 +70,7 @@ export class CountriesComponent implements OnInit {
     ).subscribe(
       {
         complete: () => {
-          this.updateValues('India');
+          this.updateValues('US');
           this.loading = false;
         }
       }
@@ -87,7 +87,7 @@ export class CountriesComponent implements OnInit {
 
 
   updateValues(country: string) {
-    console.log(country);
+  //  console.log(country);
     this.globalDataSummary.forEach(row => {
       if (country === row.country) {
         this.totalActive += row.active;

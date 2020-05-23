@@ -4,6 +4,7 @@
 
 <div class="jumbotron bg-white text-center">
   <h1 class="display-4"> Corona Covid 19 Country</h1>
+  <h3>{{this.dataService.month}}-{{this.dataService.day}}-{{this.dataService.year}}</h3>
   <hr>
 
   <div class="mx-auto">
@@ -23,7 +24,7 @@
 
 
     <div class="row">
-      <div class="col">
+      <div class="col-sm">
         <table class="table">
           <thead>
             <tr>
@@ -41,7 +42,7 @@
           </tbody>
         </table>
       </div>
-      <div class="col">
+      <div class="col-sm">
         <google-chart [type]='chart.LineChart' style="width: 100%;" [options]='chart.options' [height]='chart.height'
           [data]='dataTable'></google-chart>
       </div>

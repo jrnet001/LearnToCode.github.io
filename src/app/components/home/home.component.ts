@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
 
   dataTable = [];
 
-  constructor(private dataService: DataServiceService) { }
+  constructor(public dataService: DataServiceService) { }
 
   ngOnInit() {
     this.dataService.getGlobalData()
