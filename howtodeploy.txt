@@ -1,0 +1,1 @@
+ng deploy --repo=https://github.com/jrnet001/LearnToCode.github.io --base-href=https://jrnet001.github.io/LearnToCode.github.io/
